@@ -1441,7 +1441,7 @@ private[spark] class DAGScheduler(
     }
   }
 
-  /** Called when stage's parents are available and we can now do its task. */
+  /** Called when stage's parents are unavailable and we can now do its task. */
   private def submitMissingTasks(stage: Stage, jobId: Int): Unit = {
     logDebug("submitMissingTasks(" + stage + ")")
 
